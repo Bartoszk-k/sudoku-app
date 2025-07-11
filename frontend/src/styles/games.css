@@ -1,0 +1,18 @@
+.games{
+    display: flex;
+    width: 90%;
+    height: 1000px;
+    flex-wrap: wrap;
+    justify-content:space-around;    
+}
+/*
+@media only screen and (max-width:1000px){
+    .games{grid-template-columns: 250px 250px 250px 250px;}
+}
+@media only screen and (min-width:1200px){
+    .games{grid-template-columns: 200px 200px 200px 200px 200px ;}
+}
+@media only screen and (min-width:1400px){
+    .games{grid-template-columns: 250px 250px 250px 250px   ;}
+}
+    */

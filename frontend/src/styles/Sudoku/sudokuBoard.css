@@ -1,0 +1,82 @@
+.Sudoku-Board {
+  box-shadow: inset 10px 10px 10px rgb(140, 140, 140);
+  width: 250px;
+  height: 250px;
+  display: grid;
+  grid-template-columns: 9% 9% 9% 9% 9% 9% 9% 9% 9% 9% 9%;
+  grid-template-rows: 9% 9% 9% 9% 9% 9% 9% 9% 9% 9% 9%;
+  font-size: 17px;
+  background-color: rgb(248, 248, 248);
+  padding: 20px;
+  /*border: 2px solid;*/
+  margin: 10px;
+}
+.Sudoku-Board>div{
+text-align: center;
+font-size: 11px;
+font-weight: 900;
+}
+.SudokuCart {
+  box-shadow: 5px 5px 10px rgb(140, 140, 140);
+  margin: 10px;
+  border-radius: 5px;
+  height: 425px;
+  z-index: 1;
+}
+/*.SudokuCart:hover {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  height: 50vw;
+  z-index: 2;
+  transition: 1s;
+  box-shadow: 0px 0px 40px 5px yellowgreen;
+  background-color: rgb(218, 218, 218);
+  .Sudoku-Board {
+    box-shadow: inset 10px 10px 10px rgb(140, 140, 140);
+    width: 95.5%;
+    height: 350%;
+    margin:auto;
+    font-size: 400%;
+    background-color: rgb(248, 248, 248);
+    padding: 10px;
+    border: 2px solid;
+    margin: 10px;
+  }
+  .data{
+    display: none;
+  }
+  .delete{
+   display: none;
+  }
+  .field{
+        width: 400%;
+        height: 400%;
+        font-size: 400%;
+  }
+}*/
+.field{
+    width: 16px;
+    height: 16px;
+    border: none;
+    font-weight: 800;
+    font-size: 15px;
+    background-color: transparent;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;;
+}
+.field:active{
+    border: none;
+}
+
+.Sudoku-Board > section {
+  width: 20px;
+  height: 20px;
+      text-align: center;
+font-size: 15px;
+font-weight: 900;
+}
+.data {
+  font-weight: bold;
+  margin-left: 15px;
+}

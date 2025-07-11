@@ -1,0 +1,52 @@
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    width: 300px;
+    height: auto;
+    background-color: #f3f3f3;
+    /*border: 2px solid #2f2f2f ;*/
+    margin: auto;
+    margin-top: 10%; 
+    padding: 20px 20px 0 20px;
+    box-shadow: 5px 5px 10px rgb(140, 140, 140);
+    border-radius: 5%;
+}
+.headers{
+    text-align: center;
+    color: #003151;
+    padding-bottom: 20px;
+    border-bottom: #003151 2.5px solid;
+}
+a{
+     color: #003151;   
+}
+.attension{
+    color: #800000;
+}
+label{
+    height: 0px;
+    font-weight: 700;
+    color: #000000;
+}
+form>input{
+    border: none;
+
+    border-radius: 50px;
+    /*box-shadow: inset 3px 3px 10px rgb(140, 140, 140);*/
+    font-family: apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 600;
+    padding-left: 10px;
+}
+input:active{
+    border: none;
+}
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
