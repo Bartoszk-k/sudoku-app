@@ -74,6 +74,6 @@ jobs:
         uses: azure/webapps-deploy@v3
         id: deploy-to-webapp
         with:
-          app-name: 'sudokuapp123'
+          app-name: 'sudokuapp'
           slot-name: 'Production'
           
