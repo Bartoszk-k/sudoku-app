@@ -2,7 +2,7 @@
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 # More info on Python, GitHub Actions, and Azure App Service: https://aka.ms/python-webapps-actions
 
-name: Build and deploy Python app to Azure Web App - Sudokuapp
+name: Build and deploy Python app to Azure Web App - sudokuapp
 
 on:
   push:
@@ -22,7 +22,7 @@ jobs:
       - name: Set up Python version
         uses: actions/setup-python@v5
         with:
-          python-version: '3.13'
+          python-version: '3.12'
 
       - name: Create and start virtual environment
         run: |
@@ -66,14 +66,14 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_919CDFA1C0FF42CBB2614F997C8BB4B1 }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_028F835D4B7B45F1B4F1A72D49952C72 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_DBC3DBDC5C98445B955E987E73280CA5 }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_76E83DA1F4D048DDAF216C0FAE0CB5C8 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_48D669908A4D4CC1B08E67CB4B4533D2 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_BA226D1AA65C445A8FA58A7FA789CAA8 }}
 
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v3
         id: deploy-to-webapp
         with:
-          app-name: 'Sudokuapp'
+          app-name: 'sudokuapp'
           slot-name: 'Production'
           
