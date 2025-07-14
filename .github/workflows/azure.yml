@@ -25,6 +25,6 @@ jobs:
     - name: Azure WebApp Deploy
       uses: azure/webapps-deploy@v2
       with:
-        app-name: sudoku-app-azure
+        app-name: sudokuapp
         publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE }}
         package: .
