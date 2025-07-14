@@ -1,4 +1,4 @@
-name: Deploy to Azure
+name: Deploy Sudoku App to Azure
 
 on:
   push:
@@ -10,21 +10,23 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - name: Checkout code
+      uses: actions/checkout@v3
 
-    - name: Setup Python
-      uses: actions/setup-python@v2
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
       with:
-        python-version: '3.12'
+        node-version: '16'
 
-    - name: Install dependencies
+    - name: Install dependencies and build frontend
       run: |
-        cd backend
-        pip install -r requirements.txt
+        cd frontend
+        npm install
+        npm run build
 
-    - name: Azure WebApp Deploy
+    - name: Deploy to Azure Web App
       uses: azure/webapps-deploy@v2
       with:
-        app-name: sudokuapp
+        app-name: 'sudokuapp'
         publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE }}
-        package: .
+        package: './frontend/build'
