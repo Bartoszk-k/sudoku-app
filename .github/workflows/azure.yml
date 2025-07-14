@@ -26,6 +26,5 @@ jobs:
       uses: azure/webapps-deploy@v2
       with:
         app-name: sudokuapp
-        slot-name: h7cecrbkgcguewcx
         publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE }}
         package: .
