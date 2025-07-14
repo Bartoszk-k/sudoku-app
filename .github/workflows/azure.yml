@@ -1,4 +1,4 @@
-name: Deploy Sudoku App to Azure
+name: Deploy using Publish Profile
 
 on:
   push:
@@ -6,27 +6,16 @@ on:
       - main
 
 jobs:
-  build-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
-
-    - name: Setup Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: '16'
-
-    - name: Install dependencies and build frontend
-      run: |
-        cd frontend
-        npm install
-        npm run build
+    - uses: actions/checkout@v3
 
     - name: Deploy to Azure Web App
       uses: azure/webapps-deploy@v2
       with:
-        app-name: 'sudokuapp'
+        app-name: sudokuapp
+        slot-name: production
         publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE }}
-        package: './frontend/build'
+        package: .
